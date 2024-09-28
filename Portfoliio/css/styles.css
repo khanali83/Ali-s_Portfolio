@@ -1,0 +1,318 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    color: #333;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-brand {
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar-nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dark-mode-toggle {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.hero {
+    background: linear-gradient(135deg, #dcedc1, #a8e6cf);
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+}
+
+.contact-button {
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background: #333;
+    color: #fff;
+}
+
+.footer {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    color: #333;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.skills-list,
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.skills-list li,
+.projects-list li {
+    padding: 5px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form elements */
+    margin: 20px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit the max width */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #a8e6cf; /* Change border color on focus */
+}
+
+.contact-form button {
+    background: #a8e6cf;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #dcedc1;
+}
+
+.description {
+    text-align: justify;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Projects and Skills Section */
+.project {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    transition: transform 0.2s;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+body.dark-mode .navbar {
+    background: #212529;
+}
+
+body.dark-mode .footer {
+    background: #212529;
+}
+
+body.dark-mode .contact-button {
+    background: #fff;
+    color: #343a40;
+}
+
+body.dark-mode .contact-button:hover {
+    background: #343a40;
+    color: #fff;
+}
+
+body.dark-mode .description {
+    background: #495057;
+}
+
+body.dark-mode .project {
+    border: 1px solid #555;
+}
+/* Default Light Mode Styles */
+body {
+    background-color: white;
+    color: black;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+button#dark-mode-toggle {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+body.dark-mode button#dark-mode-toggle {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+button#dark-mode-toggle:hover {
+    background-color: #45a049;
+}
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Slider Rounded */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-color: #1c1c1c;
+    color: white;
+}
+/* Styling for the navigation links */
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for darker background */
+nav ul li a:hover {
+    background-color: #388E3C; /* Darker green for hover */
+    color: #ffffff; /* Optional: Maintain white text color on hover */
+}
+.switch{
+text-align:"left";
+}
