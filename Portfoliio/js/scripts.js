@@ -1,30 +1,27 @@
-// scripts.js
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const prefersDarkMode = localStorage.getItem('darkMode') === 'enabled';
 
-document.addEventListener('DOMContentLoaded', function () {
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-    // Check local storage for dark mode preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-        darkModeToggle.checked = true;
+    // Apply dark mode on load if enabled
+    if (prefersDarkMode) {
+        enableDarkMode();
     }
 
-    darkModeToggle.addEventListener('change', function () {
-        document.body.classList.toggle('dark-mode');
-
-        // Save preference in local storage
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('dark-mode', 'enabled');
+    toggleButton.addEventListener('click', function() {
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            disableDarkMode();
         } else {
-            localStorage.setItem('dark-mode', 'disabled');
+            enableDarkMode();
         }
     });
-});
 
-// Navbar script for mobile
-const mobileMenu = document.getElementById('mobile-menu');
-const navbarNav = document.querySelector('.navbar-nav');
+    function enableDarkMode() {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    }
 
-mobileMenu.addEventListener('click', function() {
-    navbarNav.classList.toggle('active');
+    function disableDarkMode() {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+    }
 });
