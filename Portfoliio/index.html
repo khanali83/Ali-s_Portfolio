@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Ali Khan</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js" defer></script>
@@ -12,6 +11,11 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="navbar-brand">...Ali Khan...</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul class="navbar-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,15 +23,17 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-<h4>Dark-Mode</h4>
- <label class="switch">
-        <input type="checkbox" id="dark-mode-toggle">
-        <span class="slider round"></span>
-    </label>        </div>
+            <h4 style="display: inline; margin-left: 20px;">Dark-Mode</h4>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
     </nav>
+    
     <div class="hero">
         <div class="hero-content" style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
-    <img src="images/your-photo.jpg" alt="Ali Khan" style="border-radius: 50%; width: 200px; height: 200px;">
+            <img src="images/your-photo.jpg" alt="Ali Khan" style="border-radius: 50%; width: 200px; height: 200px;">
             <h1>Ali Khan</h1>
             <h2>Tech Savvy Professional</h2>
         </div>
@@ -42,6 +48,7 @@
             </p>
         </div>
     </footer>
-<script src="darkmode.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
 </html>
