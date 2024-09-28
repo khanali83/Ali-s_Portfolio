@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Ali Khan</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js" defer></script>
@@ -12,6 +11,11 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="navbar-brand">...Ali Khan...</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul class="navbar-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,32 +23,27 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-<h4>Dark-Mode</h4>
- <label class="switch">
-        <input type="checkbox" id="dark-mode-toggle">
-        <span class="slider round"></span>
-    </label>        </div>
-    </nav>
-    <section class="projects-section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Image Recognition Bot</h3>
-                <p>A chatbot capable of interpreting images uploaded by users and engaging in meaningful dialogue about the content using NLP and image recognition.</p>
-            </div>
-            <div class="project">
-                <h3>Learning Management System</h3>
-                <p>An interactive platform for managing and delivering educational content, assessments, and tracking student progress.</p>
-            </div>
-            <div class="project">
-                <h3>IoT-Based Solar Panel Adjustment</h3>
-                <p>This project utilizes a servo motor to automatically adjust and rotate a solar panel for optimal energy utilization.</p>
-            </div>
+            <h4 style="display: inline; margin-left: 20px;">Dark-Mode</h4>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider round"></span>
+            </label>
         </div>
-    </section>
+    </nav>
 
-    <footer class="footer">
-      
+    <div class="projects">
+        <div class="container">
+            <h1>Projects</h1>
+            <ul>
+                <li><strong>Conversational Image Recognition Chatbot:</strong> A chatbot that interprets images uploaded by users, detects and classifies objects, and engages in meaningful dialogue.</li>
+                <li><strong>Learning Management System:</strong> A platform designed to facilitate online learning and management of educational content.</li>
+                <li><strong>IoT-Based Solar Panel:</strong> A project that enables solar panels to adjust automatically with a servo motor to optimize solar energy utilization.</li>
+                <li><strong>Web Development Food Ordering System:</strong> A user-friendly web application for food ordering, featuring menus, order tracking, and payment integration.</li>
+                <li><strong>E-commerce Website:</strong> An online platform for buying and selling products, with features like user authentication, shopping cart, and payment processing.</li>
+            </ul>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container footer-content">
             <p>Contact me at: <a href="mailto:khanali85666@gmail.com">khanali85666@gmail.com</a></p>
@@ -54,5 +53,7 @@
             </p>
         </div>
     </footer>
-<script src="darkmode.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
 </html>
