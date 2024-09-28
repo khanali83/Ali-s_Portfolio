@@ -1,27 +1,30 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    const prefersDarkMode = localStorage.getItem('darkMode') === 'enabled';
+// scripts.js
 
-    // Apply dark mode on load if enabled
-    if (prefersDarkMode) {
-        enableDarkMode();
+document.addEventListener('DOMContentLoaded', function () {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    // Check local storage for dark mode preference
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
     }
 
-    toggleButton.addEventListener('click', function() {
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            disableDarkMode();
+    darkModeToggle.addEventListener('change', function () {
+        document.body.classList.toggle('dark-mode');
+
+        // Save preference in local storage
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
         } else {
-            enableDarkMode();
+            localStorage.setItem('dark-mode', 'disabled');
         }
     });
+});
 
-    function enableDarkMode() {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-    }
+// Navbar script for mobile
+const mobileMenu = document.getElementById('mobile-menu');
+const navbarNav = document.querySelector('.navbar-nav');
 
-    function disableDarkMode() {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled');
-    }
+mobileMenu.addEventListener('click', function() {
+    navbarNav.classList.toggle('active');
 });
