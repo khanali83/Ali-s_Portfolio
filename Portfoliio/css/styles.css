@@ -316,3 +316,117 @@ nav ul li a:hover {
 .switch{
 text-align:"left";
 }
+/* Base styles for larger screens (web) */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    color: #333;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-brand {
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar-nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+.hero {
+    background: linear-gradient(135deg, #dcedc1, #a8e6cf);
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #fff;
+}
+
+.footer {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    color: #333;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    /* Adjust container for mobile */
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    /* Stack navbar items vertically for mobile */
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Make the brand/logo centered */
+    .navbar .navbar-brand {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust font sizes for mobile */
+    .navbar .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-nav a {
+        font-size: 18px;
+    }
+
+    /* Adjust hero image size */
+    .hero img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Adjust footer for mobile */
+    .footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
